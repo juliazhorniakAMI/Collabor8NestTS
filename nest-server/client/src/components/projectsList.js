@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //const baseUrl = 'http://24.185.220.224:8000/api/projects';
 //const baseUrl = 'http://127.0.0.1:8000/api/projects';
-const baseUrl = 'http://ec2-18-212-198-67.compute-1.amazonaws.com:8000/api/projects';
+const baseUrl = 'http://ec2-54-209-142-161.compute-1.amazonaws.com:8000/projects';
 const Project = (props) => (
  <tr>
    <td>{props.project.title}</td>
    <td>{props.project.description}</td>
    
    <td>
-     <Link className="btn btn-link" to={`/edit/${props.project.id}`}>Edit</Link> |
+     <Link className="btn btn-link" to={`/edit/${props.project._id}`}>Edit</Link> |
      <button className="btn btn-link"
        onClick={() => {
-         props.deleteProject(props.project.id);
+         props.deleteProject(props.project._id);
        }}
      >
        Delete
@@ -51,7 +51,7 @@ export default function ProjectsList() {
    });
  
    // @ts-ignore
-   const newRecords = projects.filter((el) => el.id !== id);
+   const newRecords = projects.filter((el) => el._id !== id);
    // @ts-ignore
    setProjects(newRecords);
  }
@@ -63,9 +63,9 @@ export default function ProjectsList() {
        <Project
          project={project}
          // @ts-ignore
-         deleteProject={() => deleteProject(project.id)}
+         deleteProject={() => deleteProject(project._id)}
          // @ts-ignore
-         key={project.id}
+         key={project._id}
        />
      );
    });

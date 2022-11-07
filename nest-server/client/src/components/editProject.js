@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 //const baseUrl = 'http://24.185.220.224:8000/api/projects';
-const baseUrl = 'http://ec2-18-212-198-67.compute-1.amazonaws.com:8000/api/projects';
+const baseUrl = 'http://ec2-54-209-142-161.compute-1.amazonaws.com:8000/projects';
 export default function Edit() {
  const [form, setForm] = useState({
   title: '',
