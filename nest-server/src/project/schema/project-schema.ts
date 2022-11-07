@@ -14,5 +14,5 @@ export class Project {
   @Prop()
   published: Boolean;
 }
- 
+
 export const ProjectSchema = SchemaFactory.createForClass(Project);
