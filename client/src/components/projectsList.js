@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //const baseUrl = 'http://24.185.220.224:8000/api/projects';
 //const baseUrl = 'http://127.0.0.1:8000/api/projects';
-const baseUrl = 'http://ec2-54-209-142-161.compute-1.amazonaws.com:8000/projects';
+//const baseUrl = 'http://ec2-54-209-142-161.compute-1.amazonaws.com:8000/projects';
+const baseUrl = 'http://localhost:8000/projects';
 const Project = (props) => (
  <tr>
    <td>{props.project.title}</td>
