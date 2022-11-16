@@ -4,20 +4,25 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
  
 // We import all the components we need in our app
-import Navbar from "./components/navbar";
-import ProjectsListComponent from "./components/projectsList";
-import EditProjectComponent from "./components/editProject";
-import CreateProjectComponent from "./components/createProject";
+import Homepage from "./components/homePage";
+// import Navbar from "./components/navbar";
+// import ProjectsListComponent from "./components/projectsList";
+// import EditProjectComponent from "./components/editProject";
+// import CreateProjectComponent from "./components/createProject";
  
 const App = () => {
  return (
    <div>
-     <Navbar />
+     {
+     
+     <Homepage />
+   
+     /* <Navbar />
      <Routes>
        <Route path="/" element={<ProjectsListComponent />} />
        <Route path="/edit/:id" element={<EditProjectComponent />} />
        <Route path="/create" element={<CreateProjectComponent />} />
-     </Routes>
+     </Routes> */}
    </div>
  );
 };
