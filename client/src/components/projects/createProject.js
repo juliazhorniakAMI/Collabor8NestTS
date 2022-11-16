@@ -41,12 +41,10 @@ export default function Create() {
    setForm({  title: "",
    description: "",
    published: false});
-   navigate("/");
+   navigate("/list");
  }
- 
  // This following section will display the form that takes the input from the user.
  return (
-  
    <div>
      <h3>Create New Project</h3>
      <form onSubmit={onSubmit}>
@@ -57,8 +55,7 @@ export default function Create() {
           className="form-control"
           id="title"
           value={form.title}
-          onChange={(e) => updateForm({ title: e.target.value })}
-         
+          onChange={(e) => updateForm({ title: e.target.value })}     
         />
   </div>
        <div className="form-group">
@@ -68,8 +65,7 @@ export default function Create() {
           className="form-control"
           id="description"
            value={form.description}
-           onChange={(e) => updateForm({ description: e.target.value })}
-          
+           onChange={(e) => updateForm({ description: e.target.value })}         
          />
        </div>
        <div className="form-group">

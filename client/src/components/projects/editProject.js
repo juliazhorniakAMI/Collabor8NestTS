@@ -30,7 +30,7 @@ export default function Edit() {
      const record = await response.json();
      if (!record) {
        window.alert(`Project with id ${id} not found`);
-       navigate("/");
+       navigate("/list");
        return;
      }
  
@@ -67,7 +67,7 @@ export default function Edit() {
      },
    });
  
-   navigate("/");
+   navigate("/list");
  }
  
  // This following section will display the form that takes input from the user to update the data.
