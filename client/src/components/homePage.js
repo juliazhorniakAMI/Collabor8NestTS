@@ -13,6 +13,14 @@ import Image2 from "../content/red-blue-flowers-scaled.jpg";
 export default function HomePage() {
     return (
       <>
+          <Helmet>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Verdana|Montserrat" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet" />
+                <script src="https://kit.fontawesome.com/f6ef68423a.js" crossOrigin="anonymous"></script>
+                <link rel="stylesheet" href="../css/collabor8.css" />
+            </Helmet>
             <body>         
                 <div className="wch-spacer"></div>
                 <div className="bkGrndPic">

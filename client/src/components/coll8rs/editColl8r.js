@@ -12,7 +12,8 @@ export default function Edit() {
   coll8rEmail: "",
   coll8rPass: "",
   coll8rBackgrnd: "",
-  coll8rResume: ""
+  coll8rResume: "",
+  //coll8rs: [],
  });
  const params = useParams();
  const navigate = useNavigate();
@@ -67,17 +68,28 @@ export default function Edit() {
  }
  // This following section will display the form that takes input from the user to update the data.
  return (
-   <div>
-     <h3>Update Project</h3>
-     <form onSubmit={onSubmit}>
+  <div>
+  <h3>Update Project</h3>
+  <form onSubmit={onSubmit}>
+    <div className="form-group">
+    <label htmlFor="coll8rType">Type</label>
+     <input
+       type="text"
+       className="form-control"
+       id="coll8rType"
+       value={form.coll8rType}
+       onChange={(e) => updateForm({ coll8rType: e.target.value })}
+     />
+</div>
         <div className="form-group">
-          <label htmlFor="coll8rType">Type</label>
+          <label htmlFor="coll8rFullName">FullName</label>
           <input
             type="text"
             className="form-control"
-            id="coll8rType"
-            value={form.coll8rType}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            id="coll8rFullName"
+            value={form.coll8rFullName}
+            onChange={(e) => updateForm({ coll8rFullName: e.target.value })}
+
           />
         </div>
         <div className="form-group">
@@ -88,6 +100,7 @@ export default function Edit() {
             id="coll8rEmail"
             value={form.coll8rEmail}
             onChange={(e) => updateForm({ coll8rEmail: e.target.value })}
+
           />
         </div>
         <div className="form-group">
@@ -97,7 +110,8 @@ export default function Edit() {
             className="form-control"
             id="coll8rPass"
             value={form.coll8rPass}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rPass: e.target.value })}
+
           />
         </div>
         <div className="form-group">
@@ -107,7 +121,8 @@ export default function Edit() {
             className="form-control"
             id="coll8rBackgrnd"
             value={form.coll8rBackgrnd}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rBackgrnd: e.target.value })}
+
           />
         </div>
         <div className="form-group">
@@ -117,17 +132,19 @@ export default function Edit() {
             className="form-control"
             id="coll8rResume"
             value={form.coll8rResume}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rResume: e.target.value })}
+
           />
         </div>
-       <div className="form-group">
+
+        <div className="form-group">
          <input
            type="submit"
            value="Update Project"
            className="btn btn-primary"
          />
        </div>
-     </form>
+      </form>
    </div>
  );
 }
