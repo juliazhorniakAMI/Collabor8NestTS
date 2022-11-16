@@ -14,7 +14,7 @@ const Coll8or = (props) => (
    <td>{props.coll8r.coll8rBackgrnd}</td>
    <td>{props.coll8r.coll8rResume}</td>  
    <td>
-     <Link className="btn btn-link" to={`/edit/${props.coll8r._id}`}>Edit</Link> |
+     <Link className="btn btn-link" to={`/coll8redit/${props.coll8r._id}`}>Edit</Link> |
      <button className="btn btn-link"
        onClick={() => {
          props.deleteColl8r(props.coll8r._id);

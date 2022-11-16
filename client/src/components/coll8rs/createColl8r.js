@@ -61,7 +61,19 @@ export default function Create() {
             className="form-control"
             id="coll8rType"
             value={form.coll8rType}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rType: e.target.value })}
+
+          />
+
+        </div>
+        <div className="form-group">
+          <label htmlFor="coll8rFullName">FullName</label>
+          <input
+            type="text"
+            className="form-control"
+            id="coll8rType"
+            value={form.coll8rFullName}
+            onChange={(e) => updateForm({ coll8rFullName: e.target.value })}
 
           />
         </div>
@@ -83,7 +95,7 @@ export default function Create() {
             className="form-control"
             id="coll8rPass"
             value={form.coll8rPass}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rPass: e.target.value })}
 
           />
         </div>
@@ -94,7 +106,7 @@ export default function Create() {
             className="form-control"
             id="coll8rBackgrnd"
             value={form.coll8rBackgrnd}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rBackgrnd: e.target.value })}
 
           />
         </div>
@@ -105,7 +117,7 @@ export default function Create() {
             className="form-control"
             id="coll8rResume"
             value={form.coll8rResume}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            onChange={(e) => updateForm({ coll8rResume: e.target.value })}
 
           />
         </div>
